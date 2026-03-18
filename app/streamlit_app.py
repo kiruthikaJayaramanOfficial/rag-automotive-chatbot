@@ -1,5 +1,5 @@
 """
-AutoDoc AI — Agentic RAG with LangGraph
+LangRAG Docs — Agentic RAG with LangGraph
 - Unified chat: text + image upload in ONE chat interface
 - LangGraph 5-node workflow (Router → Vision → Retrieval → Grader → Generator)
 - Self-correction retry loop
@@ -31,7 +31,7 @@ except ImportError:
 load_dotenv()
 
 # ── Page config ────────────────────────────────────────────────────────────────
-st.set_page_config(page_title="AutoDoc AI", page_icon="📄", layout="wide")
+st.set_page_config(page_title="LangRAG Docs", page_icon="📄", layout="wide")
 
 st.markdown("""
 <style>
@@ -180,7 +180,7 @@ def hybrid_search(query, chunks, bm25_idx, chroma_vs, k=8):
     return merged[:k]
 
 def export_txt():
-    lines = ["AutoDoc AI — Export", f"Generated: {datetime.datetime.now():%Y-%m-%d %H:%M}", "="*50, ""]
+    lines = ["LangRAG Docs — Export", f"Generated: {datetime.datetime.now():%Y-%m-%d %H:%M}", "="*50, ""]
     for q in st.session_state.query_log:
         lines += [f"[{q['time']}] {q['mode']} | Conf:{q['confidence']}%",
                   f"Q: {q['question']}", f"A: {q.get('answer','')}", ""]
@@ -448,7 +448,7 @@ def submit_message(question, image_b64=None, display_image_bytes=None):
 # SIDEBAR
 # ══════════════════════════════════════════════════════════════════════════════
 with st.sidebar:
-    st.markdown("## 📄 AutoDoc AI")
+    st.markdown("## 📄 LangRAG Docs")
     st.caption("Agentic RAG · LangGraph · Hybrid Search")
     st.divider()
 
@@ -510,7 +510,7 @@ with st.sidebar:
 tab1, tab2 = st.tabs(["💬 Chat", "📊 Analytics"])
 
 with tab1:
-    st.title("📄 AutoDoc AI")
+    st.title("📄 LangRAG Docs")
     st.caption("Agentic RAG · LangGraph · Hybrid Search · Multimodal")
 
     if not st.session_state.pdf_store:

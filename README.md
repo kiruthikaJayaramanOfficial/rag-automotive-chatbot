@@ -1,31 +1,33 @@
-# 🚗 AutoDoc AI — Agentic RAG Chatbot for Vehicle Manuals
+# 🔍 LangRAG Docs — Agentic RAG for Any PDF Document
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://rag-automotive-chatbot-nhg457n8xhzm4tonlvay4b.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://langrag-docs-nhg457n8xhzm4tonlvay4b.streamlit.app)
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
 ![LangGraph](https://img.shields.io/badge/LangGraph-Agentic_RAG-purple)
 ![Groq](https://img.shields.io/badge/LLM-Groq_Free_Tier-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-> Upload any vehicle or laptop manual PDF, ask questions in plain English, and photograph dashboard warning lights to get instant cited answers — powered by a **self-correcting LangGraph agentic pipeline**.
+> Upload **any PDF**, ask questions in plain English, and photograph images to get instant cited answers — powered by a **self-correcting LangGraph agentic pipeline**.
+
+No fixed documents. No vendor lock-in. Bring your own PDF — vehicle manuals, research papers, legal documents, product guides — and get accurate, cited answers instantly.
 
 ---
 
 ## 🔗 Live Demo
 
-**[rag-automotive-chatbot-nhg457n8xhzm4tonlvay4b.streamlit.app](https://rag-automotive-chatbot-nhg457n8xhzm4tonlvay4b.streamlit.app)**
+**[langrag-docs.streamlit.app](https://langrag-docs-nhg457n8xhzm4tonlvay4b.streamlit.app)**
 
 ---
 
 ## 📸 Screenshots
 
-### Home — Upload any PDF and get started instantly
+### Home — Clean upload interface
 ![Main Screen](screenshots/main.png)
 
-### Auto Summary + Suggested Questions on Upload
+### Auto Summary + 4 Suggested Questions on Upload
 ![Summary and Questions](screenshots/01_summary_questions.png)
 
-### Multimodal Vision — Dashboard Warning Light Identified
-![Warning Light Analysis](screenshots/picture_analysis.png)
+### Multimodal Vision — Image Analyzed + Manual Cross-Referenced
+![Image Analysis](screenshots/picture_analysis.png)
 
 ### LangGraph Agent Trace + Source Citations
 ![Agent Trace and Sources](screenshots/langraph_souce_expansion.png)
@@ -38,33 +40,30 @@
 
 ---
 
-## 🧠 Architecture — LangGraph 5-Node Agentic Pipeline
+## 🧠 LangGraph Agentic Pipeline
 
 ```
 User Input (text or image)
          │
     ┌────▼──────┐
-    │  ROUTER   │── text ──────────────────────────┐
-    └────┬──────┘                                   │
-         │ image                                    │
-    ┌────▼──────────┐                    ┌──────────▼──────────┐
-    │  VISION AGENT │                    │     RETRIEVAL       │
-    │  Llama-4      │── description ────►│  Hybrid BM25 +      │
-    │  Scout 17B    │                    │  ChromaDB Vector    │
-    └───────────────┘                    └──────────┬──────────┘
-                                                    │
-                                         ┌──────────▼──────────┐
-                                         │      GRADER         │
-                                         │  LLM judges chunk   │
-                                         │  relevance          │
-                                         └──────────┬──────────┘
-                                                    │
-                                         ┌──────────▼──────────┐
-                                         │     GENERATOR       │
-                                         │  Fuses context +    │
-                                         │  vision + memory    │
-                                         │  → Cited answer     │
-                                         └─────────────────────┘
+    │  ROUTER   │── text ───────────────────────────┐
+    └────┬──────┘                                    │
+         │ image                                     │
+    ┌────▼──────────┐                   ┌────────────▼────────────┐
+    │ VISION AGENT  │                   │       RETRIEVAL         │
+    │ Llama-4 Scout │── description ───►│  Hybrid BM25 + ChromaDB │
+    │ 17B (Groq)    │                   └────────────┬────────────┘
+    └───────────────┘                                │
+                                        ┌────────────▼────────────┐
+                                        │        GRADER           │
+                                        │  LLM checks relevance   │
+                                        └────────────┬────────────┘
+                                                     │
+                                        ┌────────────▼────────────┐
+                                        │       GENERATOR         │
+                                        │  Context + vision +     │
+                                        │  memory → cited answer  │
+                                        └─────────────────────────┘
 ```
 
 ---
@@ -73,17 +72,17 @@ User Input (text or image)
 
 | Feature | Description |
 |---|---|
-| 🤖 **LangGraph Agentic RAG** | 5-node self-correcting graph — Router → Vision → Retrieval → Grader → Generator |
-| 👁 **Multimodal Vision** | Upload dashboard photo → Llama-4 Scout 17B identifies warning light from image |
-| 🔍 **Hybrid Search** | BM25 keyword + ChromaDB vector combined — catches exact codes AND semantic matches |
-| 🧠 **Conversation Memory** | Last 3 turns included in every prompt — supports natural follow-up questions |
-| 📋 **Auto Document Summary** | 2-3 sentence overview auto-generated immediately after any PDF upload |
-| 💡 **Suggested Questions** | 4 LLM-generated clickable questions based on uploaded document content |
+| 🤖 **LangGraph Agentic RAG** | 5-node pipeline — Router → Vision → Retrieval → Grader → Generator |
+| 👁 **Multimodal Vision** | Upload any image → Llama-4 Scout 17B describes it → RAG finds relevant manual section |
+| 🔍 **Hybrid Search** | BM25 keyword + ChromaDB vector — catches exact terms AND semantic meaning |
+| 🧠 **Conversation Memory** | Last 3 turns in every prompt — natural follow-up questions work |
+| 📋 **Auto Document Summary** | 2-3 sentence overview generated immediately on PDF upload |
+| 💡 **Suggested Questions** | 4 LLM-generated clickable questions from your document content |
 | 📊 **Confidence Scoring** | 🟢 ≥70% · 🟡 ≥40% · 🔴 <40% badge on every answer |
 | ⚠️ **Graceful Not-Found** | Orange warning box instead of hallucination when answer is absent |
-| 📁 **Multi-PDF + Filter** | Upload multiple PDFs, restrict answers to specific documents via checkboxes |
-| ⬇️ **Export Conversation** | Download full chat with timestamps, confidence scores, and citations as `.txt` |
-| 📈 **Analytics Dashboard** | Query history, confidence distribution, document stats, LangGraph node info |
+| 📁 **Multi-PDF + Filter** | Upload multiple PDFs, restrict answers to specific documents |
+| ⬇️ **Export Conversation** | Download full chat with timestamps, confidence, citations as `.txt` |
+| 📈 **Analytics Dashboard** | Query history, confidence stats, document index info |
 
 ---
 
@@ -104,20 +103,7 @@ User Input (text or image)
 
 ---
 
-## 📊 Built-in Dataset
-
-| Manual | Pages | Category |
-|---|---|---|
-| Toyota Fortuner 2025 | 460 | Automotive |
-| Toyota Innova Crysta 2024 | 560 | Automotive |
-| Dell Inspiron 15 3000 | 23 | Laptop |
-| HP Laptop User Guide | 70 | Laptop |
-| Lenovo ThinkPad X250 | 177 | Laptop |
-| **Total** | **1,290 pages · 3,977 chunks** | |
-
----
-
-## 🧪 Evaluation
+## 🧪 Evaluation (Toyota Fortuner 2025 Manual — Demo Dataset)
 
 | Metric | Value |
 |---|---|
@@ -126,47 +112,47 @@ User Input (text or image)
 | ROUGE-L Score | 0.066 |
 | Avg Session Confidence | ~80% |
 
-> ROUGE-L appears low because RAG returns detailed multi-line answers while ground truth is a short phrase. Qualitative accuracy is high — all 20 answers correctly cited the right manual pages.
+> ROUGE-L is low because RAG returns detailed answers while ground truth is short. Qualitative accuracy is high — all 20 answers correctly cited the right pages.
 
 ---
 
-## 🔬 Tested Scenarios
+## 🔬 Demo Scenarios (using Toyota Fortuner 2025 Manual)
 
-**Scenario 1 — Warning Light Vision (Multimodal)**
-Upload Fortuner manual → upload dashboard photo with engine warning light → *"What does this warning light mean?"*
-→ Llama-4 Scout identifies **Malfunction Indicator Lamp** → retrieves page 388 → explains causes: loose gas cap, faulty oxygen sensor, catalytic converter issue
+**Scenario 1 — Image Analysis**
+Upload manual + photo of dashboard showing engine warning light → *"What does this warning light mean?"*
+→ Llama-4 Scout identifies **Malfunction Indicator Lamp** → retrieves page 388 → explains causes with action steps
 
-**Scenario 2 — Maintenance Query with Citations**
-*"What is the oil change interval for Fortuner?"*
-→ Retrieves pages 308, 310, 429 → answers with 6 specific driving-condition variants (normal, high altitude, heavy load, etc.)
+**Scenario 2 — Specific Query with Citations**
+*"What is the oil change interval?"*
+→ Retrieves pages 308, 310, 429 → answers with 6 driving-condition variants
 
 **Scenario 3 — Conversation Memory**
 Ask *"What is the oil change interval?"* → follow up *"Is it the same for all variants?"*
-→ Second answer references the previous exchange and answers variant-specifically
+→ Second answer references previous exchange, answers variant-specifically
 
-**Scenario 4 — Not-Found Response (Honest AI)**
-Ask about information not present in the manual
-→ Orange warning box: *"This information was not found in your manual"* — no hallucination
+**Scenario 4 — Not-Found Response**
+Ask about information absent from the document
+→ Orange box: *"Not found in document — try rephrasing or upload a more detailed manual"*
 
 ---
 
 ## 🚀 Run Locally
 
 ```bash
-# 1. Clone
-git clone https://github.com/kiruthikaJayaramanOfficial/rag-automotive-chatbot.git
-cd rag-automotive-chatbot
+# Clone
+git clone https://github.com/kiruthikaJayaramanOfficial/langrag-docs.git
+cd langrag-docs
 
-# 2. Setup
-python3 -m venv rag_env
-source rag_env/bin/activate
+# Setup
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 
-# 3. API keys — create .env file
+# API keys
 echo 'GROQ_API_KEY=your_groq_key' > .env
 echo 'GOOGLE_API_KEY=your_gemini_key' >> .env
 
-# 4. Run
+# Run
 streamlit run app/streamlit_app.py
 ```
 
@@ -177,44 +163,42 @@ Free API keys: [console.groq.com](https://console.groq.com) · [aistudio.google.
 ## 📁 Project Structure
 
 ```
-rag-automotive-chatbot/
+langrag-docs/
 ├── app/
 │   └── streamlit_app.py      # LangGraph pipeline + Streamlit UI
 ├── src/
-│   ├── ingest.py             # PDF → chunks → FAISS index
-│   └── rag_chain.py          # Base RAG chain (Groq)
+│   ├── ingest.py             # PDF ingestion pipeline
+│   └── rag_chain.py          # Base RAG chain
 ├── data/
-│   ├── faiss_index/          # Pre-built vector index
-│   └── README.md             # Dataset sources
+│   └── README.md             # Dataset documentation
 ├── eval/
 │   ├── evaluate.py           # ROUGE-L evaluation script
 │   ├── test_qa.json          # 20 ground-truth Q&A pairs
 │   └── results.json          # Evaluation results
-├── screenshots/              # App screenshots for README
+├── screenshots/              # App screenshots
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 🎯 What Makes This Different from Standard RAG
+## 🎯 LangRAG Docs vs Standard RAG
 
-| Standard RAG | AutoDoc AI |
+| Standard RAG | LangRAG Docs |
 |---|---|
 | Fixed documents only | Upload **any** PDF dynamically |
 | Text queries only | **Image + text** multimodal input |
-| Single retrieval attempt | **Self-correcting** with grader node |
-| Vector search only | **Hybrid BM25 + vector** search |
+| Single retrieval attempt | **Self-correcting** grader node |
+| Vector search only | **Hybrid BM25 + vector** |
 | No memory | **3-turn conversation** memory |
-| Hallucination on missing info | **Graceful NOT_IN_DOCUMENT** response |
-| No transparency | **Full LangGraph trace** visible per answer |
+| Hallucination on missing info | **Graceful NOT_IN_DOCUMENT** |
+| No transparency | **Full LangGraph trace** per answer |
 
 ---
 
 ## 👩‍💻 Author
 
-**Kiruthika Jayaraman**
-GitHub: [@kiruthikaJayaramanOfficial](https://github.com/kiruthikaJayaramanOfficial)
+**Kiruthika Jayaraman** · [@kiruthikaJayaramanOfficial](https://github.com/kiruthikaJayaramanOfficial)
 
 ---
 
