@@ -3,5 +3,4 @@ rag_env/
 __pycache__/
 *.pyc
 data/raw/*.pdf
-data/faiss_index/
 .DS_Store
