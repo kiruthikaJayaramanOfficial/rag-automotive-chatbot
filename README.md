@@ -14,7 +14,7 @@ No fixed documents. No vendor lock-in. Bring your own PDF — vehicle manuals, r
 
 ## 🔗 Live Demo
 
-**[langrag-docs.streamlit.app](https://langrag-docs-nhg457n8xhzm4tonlvay4b.streamlit.app)**
+**[langrag-docs.streamlit.app](https://langrag-docs-gjycjc2trydjemb4vtabqh.streamlit.app/)**
 
 ---
 
