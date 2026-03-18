@@ -1,0 +1,22 @@
+[
+  {"question": "What coolant should I use for Innova Crysta?", "ground_truth": "Toyota Super Long Life Coolant or ethylene glycol based coolant"},
+  {"question": "What is the fuel type for Toyota Fortuner?", "ground_truth": "Diesel"},
+  {"question": "How do I check engine oil level in Fortuner?", "ground_truth": "Check with dipstick when engine is cold"},
+  {"question": "What is the tire pressure for Fortuner?", "ground_truth": "Refer to the tire placard on the vehicle door"},
+  {"question": "How do I reset the maintenance light on Innova Crysta?", "ground_truth": "Turn ignition on and use trip meter reset button"},
+  {"question": "What battery type does Lenovo ThinkPad X250 use?", "ground_truth": "Lithium ion battery"},
+  {"question": "How do I connect to WiFi on ThinkPad X250?", "ground_truth": "Use the wireless switch or Fn key combination"},
+  {"question": "What is the maximum RAM for Lenovo ThinkPad X250?", "ground_truth": "16GB DDR3L"},
+  {"question": "How do I take a screenshot on HP laptop?", "ground_truth": "Press PrtSc or Fn+PrtSc keys"},
+  {"question": "What ports does Dell Inspiron 15 3000 have?", "ground_truth": "USB ports, HDMI, headphone jack, SD card reader"},
+  {"question": "How do I charge the HP laptop?", "ground_truth": "Connect AC adapter to power connector"},
+  {"question": "What is the display size of Dell Inspiron 15?", "ground_truth": "15.6 inch display"},
+  {"question": "How do I access BIOS on Dell Inspiron?", "ground_truth": "Press F2 during startup"},
+  {"question": "What type of engine does Fortuner 2025 have?", "ground_truth": "2.8L diesel engine"},
+  {"question": "How do I turn on Bluetooth on ThinkPad X250?", "ground_truth": "Use wireless settings or Fn key"},
+  {"question": "What is the seating capacity of Innova Crysta?", "ground_truth": "7 or 8 seater"},
+  {"question": "How do I replace the air filter on Fortuner?", "ground_truth": "Refer to maintenance schedule in manual"},
+  {"question": "What is the warranty on HP laptop?", "ground_truth": "Limited warranty included with product"},
+  {"question": "How do I adjust screen brightness on Lenovo?", "ground_truth": "Use Fn + brightness keys"},
+  {"question": "What is the ground clearance of Toyota Fortuner?", "ground_truth": "220mm ground clearance"}
+]
