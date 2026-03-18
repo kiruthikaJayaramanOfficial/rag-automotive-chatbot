@@ -1,0 +1,238 @@
+{
+  "rouge_l": 0.066,
+  "n_questions": 20,
+  "answered": 20,
+  "results": [
+    {
+      "question": "What coolant should I use for Innova Crysta?",
+      "ground_truth": "Toyota Super Long Life Coolant or ethylene glycol based coolant",
+      "rag_answer": "You should use either \"Toyota Super Long Life Coolant\" or a similar high-quality ethylene glycol-based non-silicate, non-amine, non-nitrite, and non-borate coolant with long-life hybrid organic acid technology.\n\nSource: (innova-crysta2024_mannual.pdf, Page 520) (innova-crysta2024_mannual.pdf, Page 384)",
+      "sources": [
+        "innova-crysta2024_mannual.pdf \u2014 page 384",
+        "fortuner_2025_mannual.pdf \u2014 page 322",
+        "innova-crysta2024_mannual.pdf \u2014 page 520",
+        "fortuner_2025_mannual.pdf \u2014 page 419"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "What is the fuel type for Toyota Fortuner?",
+      "ground_truth": "Diesel",
+      "rag_answer": "I could not find this in the manuals.",
+      "sources": [
+        "innova-crysta2024_mannual.pdf \u2014 page 523",
+        "fortuner_2025_mannual.pdf \u2014 page 428",
+        "fortuner_2025_mannual.pdf \u2014 page 431",
+        "fortuner_2025_mannual.pdf \u2014 page 414"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "How do I check engine oil level in Fortuner?",
+      "ground_truth": "Check with dipstick when engine is cold",
+      "rag_answer": "To check the engine oil level in a Fortuner, follow these steps: \n\nPark the vehicle on level ground. After warming up the engine and turning it off, wait more than 5 minutes for the oil to drain back into the bottom of the engine.\nRemove the sand and dust from around the dipstick.\nHolding a rag under the end, pull the dipstick out.\nWipe the dipstick clean.\n\n(source: fortuner_2025_mannual.pdf, Page 318)",
+      "sources": [
+        "innova-crysta2024_mannual.pdf \u2014 page 382",
+        "fortuner_2025_mannual.pdf \u2014 page 318",
+        "innova-crysta2024_mannual.pdf \u2014 page 381",
+        "fortuner_2025_mannual.pdf \u2014 page 319"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "What is the tire pressure for Fortuner?",
+      "ground_truth": "Refer to the tire placard on the vehicle door",
+      "rag_answer": "The recommended cold tire inflation pressure for the Fortuner is 200 kPa (2.0 kgf/cm2 or bar, 29 psi). \n\n(Source: fortuner_2025_mannual.pdf, Page 433 and Page 339)",
+      "sources": [
+        "fortuner_2025_mannual.pdf \u2014 page 339",
+        "fortuner_2025_mannual.pdf \u2014 page 433",
+        "innova-crysta2024_mannual.pdf \u2014 page 525",
+        "innova-crysta2024_mannual.pdf \u2014 page 14"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "How do I reset the maintenance light on Innova Crysta?",
+      "ground_truth": "Turn ignition on and use trip meter reset button",
+      "rag_answer": "Unfortunately, I could not find information on how to reset the maintenance light on Innova Crysta in the provided manuals.\n\nHowever, since some car makers reset the maintenance reminder by driving a certain number of miles (usually around 50-70 miles) without resetting it (as mentioned in some online car forums), try to find how many miles are required for the Innova Crysta by researching this.\n\n(innova-crysta2024_mannual.pdf, Page 439-440)\n(fortuner_2025_mannual.pdf, Page 104)\n(hp_mannual.pdf, Page 4) \n\nNote that you can find more detailed information in other sources, such as online forums or the owner's manual (available on the manufacturer's website).",
+      "sources": [
+        "hp_mannual.pdf \u2014 page 4",
+        "innova-crysta2024_mannual.pdf \u2014 page 439",
+        "innova-crysta2024_mannual.pdf \u2014 page 150",
+        "fortuner_2025_mannual.pdf \u2014 page 104"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "What battery type does Lenovo ThinkPad X250 use?",
+      "ground_truth": "Lithium ion battery",
+      "rag_answer": "I could not find any information about the battery type of Lenovo ThinkPad X250 in the provided manuals.",
+      "sources": [
+        "dell_mannual_Inspiron_153000.pdf \u2014 page 2",
+        "innova-crysta2024_mannual.pdf \u2014 page 183",
+        "innova-crysta2024_mannual.pdf \u2014 page 419",
+        "lennova_mannual.pdf \u2014 page 86"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "How do I connect to WiFi on ThinkPad X250?",
+      "ground_truth": "Use the wireless switch or Fn key combination",
+      "rag_answer": "To connect to WiFi on ThinkPad X250, you need to download and install the USB 3.0 driver. To do this, follow these steps:\n\n1. Go to http://www.lenovo.com/ThinkPadDrivers.\n2. Select your product name to view all the device drivers for your computer.\n3. Select the device drivers you need, and follow the instructions on the screen.\n\nYou can also find the device drivers in the C:\\SWTOOLS\\DRIVERS directory on your internal storage.\n\nAlternatively, if you see a list of available WLANs, you can select the network status icon in the taskbar, and then connect to one of the available networks.\n\nSources: \n(lennova_mannual.pdf, Page 88)\n(hp_mannual.pdf, Page 26)\n(hp_mannual.pdf, Page 26)",
+      "sources": [
+        "lennova_mannual.pdf \u2014 page 88",
+        "hp_mannual.pdf \u2014 page 26"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "What is the maximum RAM for Lenovo ThinkPad X250?",
+      "ground_truth": "16GB DDR3L",
+      "rag_answer": "Unfortunately, I could not find the exact information about the maximum RAM for Lenovo ThinkPad X250 in the provided context. However, I can suggest referring to the support website mentioned in the Lenovo manual (lennova_mannual.pdf, Page 86) which is http://www.lenovo.com/support for more detailed specifications.\n\nSource: 1 (lennova_mannual.pdf, Page 86)",
+      "sources": [
+        "dell_mannual_Inspiron_153000.pdf \u2014 page 17",
+        "lennova_mannual.pdf \u2014 page 154",
+        "dell_mannual_Inspiron_153000.pdf \u2014 page 12",
+        "lennova_mannual.pdf \u2014 page 86"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "How do I take a screenshot on HP laptop?",
+      "ground_truth": "Press PrtSc or Fn+PrtSc keys",
+      "rag_answer": "I could not find this in the manuals.",
+      "sources": [
+        "hp_mannual.pdf \u2014 page 61",
+        "hp_mannual.pdf \u2014 page 22",
+        "hp_mannual.pdf \u2014 page 56",
+        "hp_mannual.pdf \u2014 page 29"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "What ports does Dell Inspiron 15 3000 have?",
+      "ground_truth": "USB ports, HDMI, headphone jack, SD card reader",
+      "rag_answer": "The Dell Inspiron 15 3000 has the following ports:\n\n- 1 Power-adapter port\n- 2 Network ports (1 RJ-45 port and 1 10/100 Mbps Ethernet controller integrated on system board)\n- 1 HDMI port\n- 2 SD-card slots (on the left and right side)\n- 2 USB 2.0 ports\n- 2 USB 3.0 ports (1 on the left and 1 on the right side)\n- 1 Headset (headphone and microphone combo) port\n- 1 M2 card slot for Wi-Fi/Bluetooth\n- 1 SD-card slot to read from and write to the SD card\n\n(source: dell_mannual_Inspiron_153000.pdf, Page 0, Page 8, Page 13, Page 22)",
+      "sources": [
+        "dell_mannual_Inspiron_153000.pdf \u2014 page 0",
+        "dell_mannual_Inspiron_153000.pdf \u2014 page 8",
+        "dell_mannual_Inspiron_153000.pdf \u2014 page 13",
+        "dell_mannual_Inspiron_153000.pdf \u2014 page 22"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "How do I charge the HP laptop?",
+      "ground_truth": "Connect AC adapter to power connector",
+      "rag_answer": "To charge your HP laptop, connect the AC adapter to your laptop and to external power. You can use the HP provided AC adapter, a replacement AC adapter provided by HP, or a compatible AC adapter purchased from HP. (hp_mannual.pdf, Page 41; hp_mannual.pdf, Page 44)\n\nAdditionally, to reduce potential safety issues, make sure to follow the guidelines and usage instructions for your specific HP laptop model. \n\nIf you have any further questions, please let me know.\n\nSources:\n(hp_mannual.pdf, Page 41)\n(hp_mannual.pdf, Page 44)",
+      "sources": [
+        "hp_mannual.pdf \u2014 page 44",
+        "hp_mannual.pdf \u2014 page 43",
+        "hp_mannual.pdf \u2014 page 41"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "What is the display size of Dell Inspiron 15?",
+      "ground_truth": "15.6 inch display",
+      "rag_answer": "The display size of Dell Inspiron 15 is 15-inch. You can find it in two types: 15-inch HD non-touch screen and 15-inch HD touch screen.\n\n Sources: \n- [Source: dell_mannual_Inspiron_153000.pdf, Page 17]\n- [Source: dell_mannual_Inspiron_153000.pdf, Page 17]",
+      "sources": [
+        "dell_mannual_Inspiron_153000.pdf \u2014 page 17",
+        "dell_mannual_Inspiron_153000.pdf \u2014 page 12",
+        "lennova_mannual.pdf \u2014 page 26"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "How do I access BIOS on Dell Inspiron?",
+      "ground_truth": "Press F2 during startup",
+      "rag_answer": "I could not find this in the manuals.\n\n(Sources: \nNone available for the specified Dell model, \nbut they match these manuals' context as hp_mannual.pdf, Pages 54 and 45)",
+      "sources": [
+        "hp_mannual.pdf \u2014 page 55",
+        "hp_mannual.pdf \u2014 page 54"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "What type of engine does Fortuner 2025 have?",
+      "ground_truth": "2.8L diesel engine",
+      "rag_answer": "The Fortuner 2025 has a 4 cylinder in line, 4 cycle, diesel engine (with turbocharger). \nSource: fortuner_2025_mannual.pdf, Page 426",
+      "sources": [
+        "fortuner_2025_mannual.pdf \u2014 page 233",
+        "fortuner_2025_mannual.pdf \u2014 page 426",
+        "fortuner_2025_mannual.pdf \u2014 page 459",
+        "fortuner_2025_mannual.pdf \u2014 page 424"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "How do I turn on Bluetooth on ThinkPad X250?",
+      "ground_truth": "Use wireless settings or Fn key",
+      "rag_answer": "I could not find this in the manuals.\n\n(I do not see any information specific to the ThinkPad X250 model in the given manuals)",
+      "sources": [
+        "hp_mannual.pdf \u2014 page 28",
+        "dell_mannual_Inspiron_153000.pdf \u2014 page 9",
+        "lennova_mannual.pdf \u2014 page 51"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "What is the seating capacity of Innova Crysta?",
+      "ground_truth": "7 or 8 seater",
+      "rag_answer": "Unfortunately, the given manuals do not specify the seating capacity of Innova Crysta.\n\nHowever, it can be inferred from the information given. \n\n- For front seats, it is mentioned to have either manual or power seat (only for driver's seat). \n- The rear seats also have captain type or bench type, implying multiple occupants can be seated here.\n\nSince we don't find the exact information in the context provided, I'll rely on external knowledge. The Innova Crysta generally seats 7 or 8 people, depending on the configuration.\n\n(I couldn't find this in the manuals provided.)",
+      "sources": [
+        "innova-crysta2024_mannual.pdf \u2014 page 188",
+        "fortuner_2025_mannual.pdf \u2014 page 3",
+        "innova-crysta2024_mannual.pdf \u2014 page 192",
+        "fortuner_2025_mannual.pdf \u2014 page 264"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "How do I replace the air filter on Fortuner?",
+      "ground_truth": "Refer to maintenance schedule in manual",
+      "rag_answer": "To replace the air filter on Fortuner, follow these steps:\n\n1. Pull out the damper as shown in the illustration, and then remove the glove box.\n2. Remove the filter cover.\n3. Remove the air conditioning filter and replace it with a new one.\nEnsure the \"\uf0adUP\" marks on the filter are pointing up.\n\nSources:\n(filename, page number)\nfortuner_2025_mannual.pdf, page 344",
+      "sources": [
+        "fortuner_2025_mannual.pdf \u2014 page 343",
+        "fortuner_2025_mannual.pdf \u2014 page 344",
+        "fortuner_2025_mannual.pdf \u2014 page 345",
+        "fortuner_2025_mannual.pdf \u2014 page 347"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "What is the warranty on HP laptop?",
+      "ground_truth": "Limited warranty included with product",
+      "rag_answer": "The warranty on HP laptop can be found in the user guides on your product and/or on the CD or DVD provided in the box. In some countries or regions, HP may provide a printed warranty in the box. For countries or regions where the warranty is not provided in printed format, you can request a copy from http://www.hp.com/go/orderdocuments. The specific warranty information about the HP laptop can be accessed through HP Help and Support or by going to http://www.hp.com/go/orderdocuments.\n\n(source: hp_manual.pdf, Page 11)",
+      "sources": [
+        "hp_mannual.pdf \u2014 page 1",
+        "hp_mannual.pdf \u2014 page 11"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "How do I adjust screen brightness on Lenovo?",
+      "ground_truth": "Use Fn + brightness keys",
+      "rag_answer": "To adjust screen brightness on Lenovo, press the brightness control keys or go to Lenovo Settings from the Start menu, then click Camera. However, since there is no option for screen brightness adjustment under the camera settings, you can go to Lenovo Settings from the Start menu, and from there, you should be able to find and adjust the display and screen settings to your desired brightness level.\n\nAlternatively, for Windows 10, you can open the Lenovo Settings app, click the settings icon in the upper-right corner, and follow the instructions on the screen to configure the display settings as desired.\n\n(Sourcelennova_mannual.pdf, Page 68 & lennova_mannual.pdf, Page 54)",
+      "sources": [
+        "lennova_mannual.pdf \u2014 page 68",
+        "fortuner_2025_mannual.pdf \u2014 page 104",
+        "lennova_mannual.pdf \u2014 page 105",
+        "lennova_mannual.pdf \u2014 page 54"
+      ],
+      "status": "ok"
+    },
+    {
+      "question": "What is the ground clearance of Toyota Fortuner?",
+      "ground_truth": "220mm ground clearance",
+      "rag_answer": "I could not find this in the manuals.",
+      "sources": [
+        "fortuner_2025_mannual.pdf \u2014 page 212",
+        "fortuner_2025_mannual.pdf \u2014 page 159",
+        "fortuner_2025_mannual.pdf \u2014 page 414",
+        "fortuner_2025_mannual.pdf \u2014 page 436"
+      ],
+      "status": "ok"
+    }
+  ]
+}
